@@ -1,0 +1,3 @@
+This repository provides a simple autocorrelation function for the cryptanalysis of the Vigenere cipher used to determin key length. Both java and python implementations are provided. The Autocorrelation class can be used to output the number of matching characters per shift of ciphertext to the console while AutocorrelationVisual class displays the same information as a JavaFX line chart. To avoid the import of a JavaFX .jar the usage of Java 1.8 or "Java 8", which comes packaged with JavaFX, is recommended.
+
+ autocorrfuncs.py simply provides a series of functions, while autocorrelation.py provides an object-oriented implementation.

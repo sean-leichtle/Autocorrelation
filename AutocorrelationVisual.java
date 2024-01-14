@@ -130,7 +130,7 @@ public class AutocorrelationVisual extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        AutocorrelationVisual acv = new AutocorrelationVisual(""/* insert ciphertext here */);
+        AutocorrelationVisual acv = new AutocorrelationVisual(""/* insert ciphertext in parentheses */);
         Map<Integer, Integer> matches = acv.autocorrelate(31 /* replace 31 with desired number of shifts */);
 
         NumberAxis xAxis = new NumberAxis("Shifts", 0, 50, 1);

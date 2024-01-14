@@ -45,10 +45,10 @@ public class Autocorrelation {
     }
 
     /*
-     * Preprocess input text to upper case,
-     * remove punctuation, spacing and
-     * newlines / carriage returns (\r: Windows),
-     * and replace characters unique to the
+     * Preprocesses input text to upper case,
+     * removes punctuation, spacing and
+     * newlines / carriage returns,
+     * and replaces characters unique to the
      * German language.
      */
     public void normalizeGerman() {
@@ -111,7 +111,7 @@ public class Autocorrelation {
     }
 
     /*
-     * Returns a hashmap containing the number
+     * Returns a map containing the number
      * of matching letters between ciphertext and
      * each shift of the copy of the ciphertext
      * up to a supplied number of shifts.

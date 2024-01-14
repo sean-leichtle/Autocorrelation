@@ -52,10 +52,10 @@ public class AutocorrelationVisual extends Application {
     }
 
     /*
-     * Preprocess input text to upper case,
-     * remove punctuation, spacing and
-     * newlines / carriage returns (\r: Windows),
-     * and replace characters unique to the
+     * Preprocesses input text to upper case,
+     * removes punctuation, spacing and
+     * newlines / carriage returns,
+     * and replaces characters unique to the
      * German language.
      */
     public void normalizeGerman() {
@@ -103,8 +103,8 @@ public class AutocorrelationVisual extends Application {
     }
 
     /*
-     * Returns a hashmap containing the number
-     * of matching lettersbetween ciphertext and
+     * Returns a map containing the number
+     * of matching letters between ciphertext and
      * each shift of the copy of the ciphertext
      * up to a supplied number of shifts.
      */
@@ -122,8 +122,8 @@ public class AutocorrelationVisual extends Application {
 
     /*
      * Displays matches per shift as a line chart.
-     * An Autocorrelation object should be
-     * initialized with the ciphertext and the number
+     * In the first statement, an Autocorrelation object should
+     * be initialized with the ciphertext and the number
      * of shifts inserted in the second line of the method as
      * indicated.
      */

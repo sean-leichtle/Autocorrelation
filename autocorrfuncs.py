@@ -3,6 +3,11 @@ import pandas as pd
 import re
 import seaborn as sns
 
+"""
+A series of functions for the cryptanalysis of
+the Vigenère cipher used to determine key length.
+"""
+
 def normalize(ciphertext) -> str:
         """
         Preprocess input text to upper case,

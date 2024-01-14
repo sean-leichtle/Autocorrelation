@@ -6,7 +6,7 @@ import seaborn as sns
 class Autocorrelation():
     """
     A class for the cryptanalysis of the Vigenère
-    cipher used to determin key length.
+    cipher used to determine key length.
     """
 
     def __init__(self, ciphertext: str = None) -> None:

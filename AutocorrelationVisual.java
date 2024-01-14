@@ -131,7 +131,7 @@ public class AutocorrelationVisual extends Application {
     public void start(Stage primaryStage) {
 
         AutocorrelationVisual acv = new AutocorrelationVisual(""/* insert ciphertext here */);
-        Map<Integer, Integer> matches = acv.autocorrelate(31 /* replace 31 with desired number of shits */);
+        Map<Integer, Integer> matches = acv.autocorrelate(31 /* replace 31 with desired number of shifts */);
 
         NumberAxis xAxis = new NumberAxis("Shifts", 0, 50, 1);
         NumberAxis yAxis = new NumberAxis("Matches", 0, 50, 1);

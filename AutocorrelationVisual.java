@@ -143,10 +143,10 @@ public class AutocorrelationVisual extends Application {
         lineChart.setTitle("Autocorrelation analysis");
         lineChart.setLegendVisible(false);
 
-        XYChart.Series data = new XYChart.Series();
+        XYChart.Series<Number, Number> data = new XYChart.Series<>();
 
         for(Map.Entry<Integer, Integer> entry : matches.entrySet()) {
-            data.getData().add(new XYChart.Data(entry.getKey(), entry.getValue()));
+            data.getData().add(new XYChart.Data<Number, Number>(entry.getKey(), entry.getValue()));
         }
 
         lineChart.getData().add(data);

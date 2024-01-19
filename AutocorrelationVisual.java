@@ -122,16 +122,14 @@ public class AutocorrelationVisual extends Application {
 
     /*
      * Displays matches per shift as a line chart.
-     * In the first statement, an Autocorrelation object should
-     * be initialized with the ciphertext and the number
-     * of shifts inserted in the second line of the method as
-     * indicated.
      */
     @Override
     public void start(Stage primaryStage) {
 
-        AutocorrelationVisual acv = new AutocorrelationVisual(""/* insert ciphertext in parentheses */);
-        Map<Integer, Integer> matches = acv.autocorrelate(31 /* replace 31 with desired number of shifts */);
+        Parameters parameters = getParameters();
+
+        AutocorrelationVisual acv = new AutocorrelationVisual(parameters.getNamed().get("ciphertext"));
+        Map<Integer, Integer> matches = acv.autocorrelate(Integer.valueOf(parameters.getNamed().get("shifts")));
 
         NumberAxis xAxis = new NumberAxis("Shifts", 0, 50, 1);
         NumberAxis yAxis = new NumberAxis("Matches", 0, 50, 1);
@@ -157,13 +155,18 @@ public class AutocorrelationVisual extends Application {
     }
 
     /*
-     * To display a line chart of an autocorrelation
-     * analysis of a ciphertext, insert only
-     * "launch(Autocorrelation.class)" in main and
-     * and modify the first two lines of the start()-
-     * method, above, as instructed.
+     * To display the line chart of the analysis
+     * of a ciphertext via autocorrelation, insert
+     * the ciphertext in `String ciphertext`and
+     * the desired number of shits in `int shifts`,
+     * below.
      */
     public static void main(String[] args) {
-        launch(AutocorrelationVisual.class);
+        String ciphertext = "";     // INSERT CIPHERTEXT HERE
+        int shifts = 0;             // INSERT NUMBER OF SHIFTS HERE
+
+        launch(AutocorrelationVisual.class,
+               "--ciphertext=" + ciphertext,
+               "--shifts=" + shifts);
     }
 }

@@ -129,8 +129,8 @@ public class AutocorrelationVisual extends Application {
         AutocorrelationVisual acv = new AutocorrelationVisual(getParameters().getNamed().get("ciphertext"));
         Map<Integer, Integer> matches = acv.autocorrelate(Integer.valueOf(getParameters().getNamed().get("shifts")));
 
-        NumberAxis xAxis = new NumberAxis("Shifts", 0, 50, 1);
-        NumberAxis yAxis = new NumberAxis("Matches", 0, 50, 1);
+        NumberAxis xAxis = new NumberAxis("Shifts", 0, 80, 1);
+        NumberAxis yAxis = new NumberAxis("Matches", 0, 45, 1);
 
         xAxis.setMinorTickVisible(false);
         yAxis.setMinorTickVisible(false);
@@ -147,7 +147,7 @@ public class AutocorrelationVisual extends Application {
 
         lineChart.getData().add(data);
  
-        primaryStage.setScene(new Scene(lineChart, 1280, 960));
+        primaryStage.setScene(new Scene(lineChart, 1500, 1000));
         primaryStage.show();
     }
 

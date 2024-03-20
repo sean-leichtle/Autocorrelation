@@ -9,7 +9,7 @@ Both Java and Python implementations are included.
 ## Java
 The [Autocorrelation](https://github.com/sean-leichtle/Autocorrelation/blob/main/Autocorrelation.java) class can be used to output the number of matching characters per shift of ciphertext to the console while the [AutocorrelationVisual](https://github.com/sean-leichtle/Autocorrelation/blob/main/AutocorrelationVisual.java) class displays the same information as a JavaFX line chart.
 
-In the latter case, to avoid employing a build system (e.g. maven or gradle) or [the somewhat involved process of compiling from the command line](https://inside.java/2023/11/14/package-javafx-native-exec/){:target="_blank"}, the use of Java 1.8 or "Java 8", which comes packaged with JavaFX, is recommended. The implementation requires user input for the ciphertext and desired number of shifts in the first two statements of the `main()`-method:
+In the latter case, to avoid employing a build system (e.g. maven or gradle) or [the somewhat involved process of compiling from the command line](https://inside.java/2023/11/14/package-javafx-native-exec/), the use of Java 1.8 or "Java 8", which comes packaged with JavaFX, is recommended. The implementation requires user input for the ciphertext and desired number of shifts in the first two statements of the `main()`-method:
 
 - `String ciphertext = "/* Insert ciphertext here */";`
 - `int shifts = /* Insert desired number of shifts here */;`

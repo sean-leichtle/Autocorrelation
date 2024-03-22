@@ -135,7 +135,3 @@ class Autocorrelation():
 
         plt.grid()
         plt.show()
-
-ac = Autocorrelation("äö..üü")
-ac.normalize_german()
-print(ac.get_ciphertext())

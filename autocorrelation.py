@@ -47,10 +47,7 @@ class Autocorrelation():
         and replace characters unique to the
         German language
         """
-        self.ciphertext = self.ciphertext.upper()
-
-        self.ciphertext = re.sub(r'[^\w\s]', '', self.ciphertext)
-        self.ciphertext = self.ciphertext.replace(" ", "").replace("\n", "").replace("\r", "")
+        self.normalize()
 
         self.ciphertext = self.ciphertext.replace("Ä", "AE")
         self.ciphertext = self.ciphertext.replace("Ö", "OE")
@@ -89,9 +86,10 @@ class Autocorrelation():
     def autocorrelate1(self, number_shifts: int) -> None:
         """
         Prints the number of matching letters
-        between ciphertext and each shift of
-        the copy of the ciphertext up to a
-        supplied number of shifts
+        resulting from a comparison of the
+        ciphertext and each shift of a copy
+        of the ciphertext up to a supplied
+        number of shifts
         """
         for i in range(number_shifts):
 
@@ -103,10 +101,11 @@ class Autocorrelation():
 
     def autocorrelate2(self, number_shifts: int) -> None:
         """
-        Displays as a line chart the number of
-        matching letters between ciphertext and
-        each shift of the copy of the ciphertext
-        up to a supplied number of shifts
+        Returns as a dictionary the number of
+        matching letters resulting from a
+        comparison of the ciphertext and each
+        shift of a copy of the ciphertext up
+        to a supplied number of shifts
         """
         matches = {}
 
@@ -136,3 +135,7 @@ class Autocorrelation():
 
         plt.grid()
         plt.show()
+
+ac = Autocorrelation("äö..üü")
+ac.normalize_german()
+print(ac.get_ciphertext())

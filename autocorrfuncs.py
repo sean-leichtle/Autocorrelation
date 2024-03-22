@@ -29,10 +29,7 @@ def normalize_german(ciphertext) -> str:
         and replace characters unique to the
         German language
         """
-        ciphertext = ciphertext.upper()
-
-        ciphertext = re.sub(r'[^\w\s]', '', ciphertext)
-        ciphertext = ciphertext.replace(" ", "").replace("\n", "").replace("\r", "")
+        ciphertext = normalize(ciphertext)
 
         ciphertext = ciphertext.replace("Ä", "AE")
         ciphertext = ciphertext.replace("Ö", "OE")
@@ -73,9 +70,10 @@ def compare_texts(ciphertext: str, shifted_text: str) -> int:
 def autocorrelate1(ciphertext: str, shifts: int) -> None:
         """
         Prints the number of matching letters
-        between ciphertext and each shift of
-        the copy of the ciphertext up to a
-        supplied number of shifts
+        resulting from a comparison of the
+        ciphertext and each shift of a copy
+        of the ciphertext up to a supplied
+        number of shifts
         """
         for i in range(shifts):
                st = shift_text(ciphertext, i)
@@ -85,9 +83,10 @@ def autocorrelate1(ciphertext: str, shifts: int) -> None:
 def autocorrelate2(ciphertext: str, shifts: int) -> dict:
         """
         Returns as a dictionary the number of
-        matching letters between ciphertext and
-        each shift of the copy of the ciphertext
-        up to a supplied number of shifts
+        matching letters resulting from a
+        comparison of the ciphertext and each
+        shift of a copy of the ciphertext up
+        to a supplied number of shifts
         """
         matches = {}
 

@@ -45,10 +45,10 @@ public class Autocorrelation {
     }
 
     /*
-     * Preprocesses input text to upper case,
-     * removes punctuation, spacing and
+     * Preprocess input text to upper case,
+     * remove punctuation, spacing and
      * newlines / carriage returns,
-     * and replaces characters unique to the
+     * and replace characters unique to the
      * German language.
      */
     public void normalizeGerman() {

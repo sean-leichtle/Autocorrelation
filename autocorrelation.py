@@ -99,7 +99,7 @@ class Autocorrelation():
 
             print(i, ": ", count)
 
-    def autocorrelate2(self, number_shifts: int) -> None:
+    def autocorrelate2(self, number_shifts: int) -> dict:
         """
         Returns as a dictionary the number of
         matching letters resulting from a
@@ -115,7 +115,7 @@ class Autocorrelation():
 
             matches[i] = self.compare_texts(st)
         
-        self.display_correlations(matches)
+        return matches
     
     def display_correlations(self, dictionary: dict) -> None:
         """

@@ -1,6 +1,6 @@
 # Autocorrelation
 
-This repository provides a simple autocorrelation function for the cryptanalysis of the Vigenere cipher and may be used, specifically, to determine the length of the key used to encrypt a ciphertext. With respect to the number of matching characters per shift of a copy of the ciphertext as compared to the ciphertext itself, any periodic interval occuring between maxima is indicative of key length.
+This repository is didactic in nature[^1] and provides a simple autocorrelation function for the cryptanalysis of the Vigenere cipher. It may be used, specifically, to determine the length of the key used to encrypt a ciphertext. With respect to the number of matching characters per shift of a copy of the ciphertext as compared to the ciphertext itself, any periodic interval occurring between maxima is indicative of key length.
 
 Autocorrelation has some advantages over other popular means of determining key length. Unlike the [Kasiski Test](https://en.wikipedia.org/wiki/Kasiski_examination), it does not depend upon recurring n-grams, and the implementation is simpler than that of the [Friedman Test](https://en.wikipedia.org/wiki/Vigenère_cipher#Friedman_test).
 
@@ -16,3 +16,5 @@ In the latter case, to avoid employing a build system (e.g. maven or gradle) or 
 
 ## Python
 [autocorrfuncs.py](https://github.com/sean-leichtle/Autocorrelation/blob/main/autocorrfuncs.py) contains a series of functions for analysis via autocorrelation, while [autocorrelation.py](https://github.com/sean-leichtle/Autocorrelation/blob/main/autocorrelation.py) includes an object-oriented implementation of the same. Both versions allow for the output of results to the console or as a line chart.
+
+[^1]: Accompanying material (in German) may be found at https://abz.inf.ethz.ch/unterrichtsmaterialien/28259-2/.

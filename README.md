@@ -17,4 +17,4 @@ In the latter case, to avoid employing a build system (e.g. maven or gradle) or 
 ## Python
 [autocorrfuncs.py](https://github.com/sean-leichtle/Autocorrelation/blob/main/autocorrfuncs.py) contains a series of functions for analysis via autocorrelation, while [autocorrelation.py](https://github.com/sean-leichtle/Autocorrelation/blob/main/autocorrelation.py) includes an object-oriented implementation of the same. Both versions allow for the output of results to the console or as a line chart.
 
-[^1]: Accompanying material (in German) may be found at https://abz.inf.ethz.ch/unterrichtsmaterialien/28259-2/.
+[^1]: Accompanying material (in German) may be found at https://abz.inf.ethz.ch/ressourcen/unterrichtsmaterial_von_lehrpersonen/019.

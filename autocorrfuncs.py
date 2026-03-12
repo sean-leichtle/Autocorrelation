@@ -117,3 +117,6 @@ def display_correlations(dictionary: dict) -> None:
 
     plt.grid()
     plt.show()
+
+sample = "FTNYTPLOOOECOSUHEFNXFTNYLLTYAFNXFTNBBSN"
+display_correlations(autocorrelate2((sample), len(sample)))
